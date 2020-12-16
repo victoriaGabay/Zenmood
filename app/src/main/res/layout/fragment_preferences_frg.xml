@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.PreferencesFrg">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="265dp"
+        android:layout_height="274dp"
+        android:src="@drawable/logo_transparent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline11"
+        app:layout_constraintStart_toStartOf="@+id/guideline10"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.manojbhadane.QButton
+        android:id="@+id/btnSetPreferences"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_margin="10dp"
+        android:text="Vamos!"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/guideline11"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline10"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:qb_backgroundColor="@color/colorPrimary"
+        app:qb_radius="100"
+        app:qb_strokeColor="@color/colorPrimaryDark"
+        app:qb_strokeWidth="0" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="249dp"
+        android:text="@string/preferencesTxt"
+        android:textAppearance="@style/textAppearanceBody1"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline11"
+        app:layout_constraintStart_toStartOf="@+id/guideline10"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.23" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

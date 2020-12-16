@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ProfileFragment">
+
+    <ImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/txtMeditatedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:text="Tiempo meditado: "
+        android:textAlignment="center"
+        android:textAppearance="@style/textAppearanceBody1"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/txtProfileName" />
+
+    <TextView
+        android:id="@+id/txtShowMedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="5 horas"
+        android:textAppearance="@style/textAppearanceBody1"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toEndOf="@+id/txtMeditatedTime"
+        app:layout_constraintTop_toBottomOf="@+id/txtProfileName" />
+
+    <TextView
+        android:id="@+id/txtProfileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="dummy txt"
+        android:textAppearance="@style/textAppearanceBody1"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/imgProfile" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+
+    <com.manojbhadane.QButton
+        android:id="@+id/btnChangePreferences"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="92dp"
+        android:text="Cambiar preferencias"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/txtMeditatedTime"
+        app:layout_constraintVertical_bias="0.089"
+        app:qb_backgroundColor="@color/colorPrimary"
+        app:qb_radius="100"
+        app:qb_strokeColor="@color/colorPrimaryDark"
+        app:qb_strokeWidth="0" />
+
+
+    <com.github.nikartm.button.FitButton
+        android:id="@+id/imgChangeProfilePic"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_margin="135dp"
+        android:layout_marginTop="135dp"
+        android:gravity="center"
+        app:fb_backgroundColor="@color/colorPrimary"
+        app:fb_icon="@drawable/ic_camera"
+        app:fb_iconColor="#FFF"
+        app:fb_iconHeight="30dp"
+        app:fb_iconWidth="30dp"
+        app:fb_shape="circle"
+        app:fb_textPaddingEnd="16dp"
+        app:fb_textPaddingStart="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toEndOf="@+id/imgProfile"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.nikartm.button.FitButton
+        android:id="@+id/imgChangeUserName"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_margin="35dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="44dp"
+        android:gravity="center"
+        app:fb_backgroundColor="@color/colorPrimary"
+        app:fb_icon="@drawable/ic_edit"
+        app:fb_iconColor="#FFF"
+        app:fb_iconHeight="30dp"
+        app:fb_iconWidth="30dp"
+        app:fb_shape="circle"
+        app:fb_textPaddingEnd="16dp"
+        app:fb_textPaddingStart="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toEndOf="@+id/txtProfileName"
+        app:layout_constraintTop_toBottomOf="@+id/imgChangeProfilePic" />
+
+    <com.manojbhadane.QButton
+        android:id="@+id/btnShowFavs"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="68dp"
+        android:text="Mostrar favoritos!"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/btnChangePreferences"
+        app:layout_constraintVertical_bias="0.115"
+        app:qb_backgroundColor="@color/colorPrimary"
+        app:qb_radius="100"
+        app:qb_strokeColor="@color/colorAccent"
+        app:qb_strokeWidth="5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

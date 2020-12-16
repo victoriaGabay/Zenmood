@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".fragments.ShowInfoFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtInfoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Dummy text"
+            android:textAppearance="@style/textAppearanceBody1"
+            android:textSize="35sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgInfo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgSaveInfoItem"
+            tools:srcCompat="@drawable/ic_launcher_foreground" />
+
+        <TextView
+            android:id="@+id/txtShowText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Dummy text"
+            android:textAlignment="gravity"
+            android:textAppearance="@style/textAppearanceBody1"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/guideline_right"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/imgInfo" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <ImageView
+            android:id="@+id/imgSaveInfoItem"
+            android:layout_width="41dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:src="@drawable/ic_favorite"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/txtInfoTitle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

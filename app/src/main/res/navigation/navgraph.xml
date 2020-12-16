@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/homeFragment">
+
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.zenmood.fragments.ProfileFragment"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_preferencesFrg"
+            app:destination="@id/preferencesFrg" />
+        <action
+            android:id="@+id/action_profileFragment_to_showFavsFragment"
+            app:destination="@id/showFavsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.example.zenmood.fragments.HelpFragment"
+        android:label="Sobre nosotros"
+        tools:layout="@layout/fragment_help">
+        <action
+            android:id="@+id/action_helpFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logoutFragment"
+        android:name="com.example.zenmood.fragments.LogoutFragment"
+        android:label="Cerrar Sesion"
+        tools:layout="@layout/fragment_logout">
+        <action
+            android:id="@+id/action_logoutFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_logoutFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.zenmood.fragments.HomeFragment"
+        android:label="Zenmood"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_logoutFragment"
+            app:destination="@id/logoutFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_showMeditationFragment"
+            app:destination="@id/showMeditationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_showInfoFragment"
+            app:destination="@id/showInfoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_preferencesFrg"
+            app:destination="@id/preferencesFrg" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.zenmood.fragments.RegisterFragment"
+        android:label="Registrarse" >
+        <action
+            android:id="@+id/action_registerFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/preferencesFrg"
+        android:name="com.example.zenmood.fragments.PreferencesFrg"
+        android:label="Preferencias"
+        tools:layout="@layout/fragment_preferences_frg" >
+        <argument
+            android:name="user"
+            app:argType="com.example.zenmood.classes.User" />
+        <action
+            android:id="@+id/action_preferencesFrg_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changePassFragment"
+        android:name="com.example.zenmood.fragments.ChangePassFragment"
+        android:label="Cambiar contraseña"
+        tools:layout="@layout/fragment_change_pass" >
+        <action
+            android:id="@+id/action_changePassFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.zenmood.fragments.LogInFragment"
+        android:label="Iniciar sesion"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_logInFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_changePassFragment"
+            app:destination="@id/changePassFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_preferencesFrg"
+            app:destination="@id/preferencesFrg" />
+        <action
+            android:id="@+id/action_logInFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/meditationFragment"
+        android:name="com.example.zenmood.fragments.MeditationFragment"
+        android:label="Meditaciones"
+        tools:layout="@layout/fragment_meditation" >
+        <action
+            android:id="@+id/action_meditationFragment_to_showMeditationFragment"
+            app:destination="@id/showMeditationFragment" />
+        <action
+            android:id="@+id/action_meditationFragment_to_preferencesFrg"
+            app:destination="@id/preferencesFrg" />
+    </fragment>
+    <fragment
+        android:id="@+id/showMeditationFragment"
+        android:name="com.example.zenmood.fragments.ShowMeditationFragment"
+        android:label="Meditaciones"
+        tools:layout="@layout/fragment_show_meditation" >
+        <argument
+            android:name="medItemInfo"
+            app:argType="com.example.zenmood.classes.MeditationItem" />
+        <argument
+            android:name="user"
+            app:argType="com.example.zenmood.classes.User" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.zenmood.fragments.InfoFragment"
+        android:label="Informacion"
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_infoFragment_to_showInfoFragment"
+            app:destination="@id/showInfoFragment" />
+        <argument
+            android:name="user"
+            app:argType="com.example.zenmood.classes.User" />
+    </fragment>
+    <fragment
+        android:id="@+id/showInfoFragment"
+        android:name="com.example.zenmood.fragments.ShowInfoFragment"
+        android:label="Informacion"
+        tools:layout="@layout/fragment_show_info" >
+        <argument
+            android:name="infoItemInfo"
+            app:argType="com.example.zenmood.classes.InformationItem" />
+        <argument
+            android:name="user"
+            app:argType="com.example.zenmood.classes.User" />
+    </fragment>
+    <fragment
+        android:id="@+id/showFavsFragment"
+        android:name="com.example.zenmood.fragments.ShowFavsFragment"
+        android:label="Favoritos"
+        tools:layout="@layout/fragment_show_favs" >
+        <action
+            android:id="@+id/action_showFavsFragment_to_showInfoFragment"
+            app:destination="@id/showInfoFragment" />
+        <action
+            android:id="@+id/action_showFavsFragment_to_showMeditationFragment"
+            app:destination="@id/showMeditationFragment" />
+    </fragment>
+</navigation>

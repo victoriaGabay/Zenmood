@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.LogInFragment">
+
+    <com.manojbhadane.QButton
+        android:id="@+id/btnRegister"
+        android:layout_width="188dp"
+        android:layout_height="38dp"
+        android:layout_margin="0dp"
+        android:layout_marginTop="8dp"
+        android:text="      Registrarse     "
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:qb_backgroundColor="@color/colorPrimary"
+        app:qb_radius="100"
+        app:qb_strokeColor="@color/colorPrimaryDark"
+        app:qb_strokeWidth="0" />
+    <com.agrawalsuneet.dotsloader.loaders.TrailingCircularDotsLoader
+        android:id="@+id/loader3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:trailingcircular_animDelay="200"
+        app:trailingcircular_animDuration="1200"
+        app:trailingcircular_bigCircleRadius="40dp"
+        app:trailingcircular_dotsColor="@color/colorPrimaryDark"
+        app:trailingcircular_dotsRadius="11dp"
+        app:trailingcircular_noOfTrailingDots="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.manojbhadane.QButton
+        android:id="@+id/btnSignIn"
+        android:layout_width="197dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="      INICIAR SESION       "
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:qb_backgroundColor="@color/colorPrimary"
+        app:qb_radius="100"
+        app:qb_strokeColor="@color/colorPrimaryDark"
+        app:qb_strokeWidth="0" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:clickable="false"
+        android:hint="Contraseña"
+        android:textColorHint="@color/colorPrimary"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:helperTextEnabled="true"
+        app:helperTextTextAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/TILuser"
+        app:passwordToggleContentDescription="Show "
+        app:passwordToggleDrawable="@android:drawable/ic_menu_view"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shadowColor="@color/colorPrimaryDark"
+            android:textColorHighlight="@color/colorPrimary"
+            android:textColorLink="@color/colorPrimaryDark"
+            android:textCursorDrawable="@color/colorPrimaryDark" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txtForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:text="¿Olvidó su contraseña?"
+        android:textColorHighlight="@color/colorPrimaryDark"
+        android:textColorLink="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TILuser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/txtEmail"
+        android:textColorHint="@color/colorPrimary"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toTopOf="@id/guideline3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtUserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Bienvenido a Zenmood!"
+        android:textAlignment="center"
+        android:textAppearance="@style/textAppearanceBody1"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_transparent"
+        app:layout_constraintBottom_toTopOf="@id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="¿Aún no se ha creado una cuenta?"
+        android:textAppearance="@style/textAppearanceBody1"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+
+    <CheckBox
+        android:id="@+id/cbStayLogged"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recordame"
+        android:textColorHighlight="@color/colorPrimaryDark"
+        android:textColorLink="@color/colorPrimaryDark"
+        android:textCursorDrawable="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="@id/txtForgotPassword"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintTop_toTopOf="@id/txtForgotPassword" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10218978" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

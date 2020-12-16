@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Zenmood</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txtEmail">Correo electrónico</string>
+    <string name="welcomeTxt">Bienvenido a Zenmood, inicie sesión para continuar</string>
+    <string name="logIn">Iniciar sesión</string>
+    <string name="preferencesTxt">Por favor responda las siguientes preguntas para continuar</string>
+    <string name="helpText"> Zenmood es una app diseñada para todas las personas, aunque esta centrada en ayudar a las personas con ansiedad. Contiene diferentes actividades e informacion respecto a la salud mental</string>
+    <string name="email1">kiki.gabay23@gmail.com</string>
+    <string name="email2">fryechu@gmail.com</string>
+
+
+    fryechu@gmail.com
+</resources>
